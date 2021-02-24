@@ -5,7 +5,7 @@
   <hr>
   <div class="container">
     <div class="time">
-      <timeblock v-for="offset in 9" :key="offset" :unit="-4 + offset" :current="now"/>
+      <timeblock v-for="offset in 9" :key="offset" :unit="8 + offset" :current="now"/>
     </div>
   </div>
 </template>
