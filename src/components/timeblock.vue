@@ -30,9 +30,9 @@ export default {
     const title = ref(localStorage[`${props.unit}`] ?? '');
 
     // our condtional values, for our style binding
-    const isPassed = computed(() => time.value.toMillis() < props.current.toMillis());
+    const isPassed = computed(() => time.value.toMillis() > props.current.toMillis());
     const isCurrent = computed(() => time.value.hour === props.current.hour);
-    const isNotPassed = computed(() => time.value.toMillis() > props.current.toMillis());
+    const isNotPassed = computed(() => time.value.toMillis() < props.current.toMillis());
 
     const save = () => {
       // seems odd, but we need to access our ref value which gives us a...
